@@ -148,4 +148,4 @@ ggseason(df)+
 
 **If you find this very useful, please cite this package:**
 
-*Brisneve Edullantes (2019). ggplottimeseries: Visualisation of Decomposed Time Series using ggplot. R package version 0.1.0.*
+*Brisneve Edullantes (2019). ggplottimeseries: Visualisation of Decomposed Time Series with ggplot2. R package version 0.1.0.*

@@ -1,10 +1,10 @@
 Package: ggplottimeseries
 Type: Package
-Title:  Visualisation of Decomposed Time Series using ggplot
+Title:  Visualisation of Decomposed Time Series with ggplot2
 Version: 0.1.0
 Author: Brisneve Edullantes
 Maintainer: Brisneve Edullantes <bedullantes@up.edu.ph>
-Description: This package has functions that can plot decomposed time series data using ggplot. 
+Description: This package has functions that can plot decomposed time series data with ggplot2. 
 License: 
 Encoding: UTF-8
 LazyData: true
