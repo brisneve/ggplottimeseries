@@ -1,10 +1,10 @@
-ggplottimeseries: Visualisation of decomposed time series using ggplot
+ggplottimeseries: Visualisation of decomposed time series with ggplot2
 ================
 
 Introduction
 ------------
 
-This package contains functions that allow users to plot decomposed time series data in ggplot.
+This package contains functions that allow users to plot decomposed time series data with ggplot2.
 
 Installation
 ------------
@@ -78,12 +78,9 @@ We now have a data frame that we could plot using ggplot. This package offers su
 **Visualise the observed, trend, seasonal, and random components of time series into one figure**
 
 ``` r
-require(tidyr)
-require(ggplot2)
+library(ggplot2)
+library(tidyr)
 
-data(co2)
-
-df <- dts2(co2, type ="additive")
 
 #plots decomposed time series into one figure
 ggdecompose(df)+
@@ -91,8 +88,64 @@ ggdecompose(df)+
   ylab("Atmospheric Concentration of CO2")
 ```
 
-    ## Warning: Removed 6 rows containing missing values (geom_path).
-
 ![](README_files/figure-markdown_github/unnamed-chunk-4-1.png)
 
-**Visualise the observed, trend, seasonal, and random components of time series into one figure** separate figures (ggobserve, ggtrend, ggseason, ggrandom, respectively). These functions also plots detrended and deseasonalised time series (ggdetrend and ggseason, respectively). These can be integrated with ggplot functions.
+**Visualise components of time series into separate figures**
+
+``` r
+#plots the observations 
+ggobserve(df)+
+  xlab("Date")+
+  ylab("Observed Atmospheric Concentration of CO2")
+```
+
+![](README_files/figure-markdown_github/unnamed-chunk-5-1.png)
+
+``` r
+#plots the trend 
+ggtrend(df)+
+  xlab("Date")+
+  ylab("Trend of Atmospheric Concentration of CO2")
+```
+
+![](README_files/figure-markdown_github/unnamed-chunk-6-1.png)
+
+``` r
+#plots the seasonality 
+ggseason(df)+
+  xlab("Date")+
+  ylab("Seasonality of Atmospheric Concentration of CO2")
+```
+
+![](README_files/figure-markdown_github/unnamed-chunk-7-1.png)
+
+``` r
+#plots the random variation 
+ggrandom(df)+
+  xlab("Date")+
+  ylab("Random Variation of Atmospheric Concentration of CO2")
+```
+
+![](README_files/figure-markdown_github/unnamed-chunk-8-1.png)
+
+**Detrend and de-seasonalise timeseries and visualise the data**
+
+``` r
+ggdetrend(df)+
+  xlab("Date")+
+  ylab("Detrended: Concentration of Atmospheric Concentration of CO2")
+```
+
+![](README_files/figure-markdown_github/unnamed-chunk-9-1.png)
+
+``` r
+ggseason(df)+
+  xlab("Date")+
+  ylab("De-seasonalised: Concentration of Atmospheric Concentration of CO2")
+```
+
+![](README_files/figure-markdown_github/unnamed-chunk-10-1.png)
+
+**If you find this very useful, please cite this package:**
+
+*Brisneve Edullantes (2019). ggplottimeseries: Visualisation of Decomposed Time Series using ggplot. R package version 0.1.0.*
