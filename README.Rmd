@@ -135,7 +135,7 @@ ggdetrend(df)+
 
 ```{r message=FALSE, warning= FALSE}
 
-ggseason(df)+
+ggdeseason(df)+
   xlab("Date")+
   ylab("De-seasonalised: Concentration of Atmospheric Concentration of CO2")
 

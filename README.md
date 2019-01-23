@@ -139,7 +139,7 @@ ggdetrend(df)+
 ![](README_files/figure-markdown_github/unnamed-chunk-9-1.png)
 
 ``` r
-ggseason(df)+
+ggdeseason(df)+
   xlab("Date")+
   ylab("De-seasonalised: Concentration of Atmospheric Concentration of CO2")
 ```
