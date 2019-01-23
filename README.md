@@ -55,7 +55,7 @@ head(df)
     ## 5 2013-03-16     22.1610    NA -6.406814     NA
     ## 6 2013-03-17     22.6093    NA -6.560656     NA
 
-Alternatively, if you have a time series-class data you can use the function *dts2*. See how this function works using the co2 dataset that contains a time series of atmospheric concentration of CO2.
+Alternatively, if you have a time series-class data you can use the function *dts2*. See how this function works using the co2 dataset that contains a time series of atmospheric concentration of CO2. This function creates a dataframe of the time series components similar to that of *dts1*.
 
 ``` r
 data(co2)
@@ -72,3 +72,27 @@ head(df)
     ## 4 1959-04-02 06:00:01      317.56    NA  2.51682018     NA
     ## 5 1959-05-02 16:00:01      318.13    NA  3.00028509     NA
     ## 6 1959-06-02 02:00:01      318.00    NA  2.32921053     NA
+
+We now have a data frame that we could plot using ggplot. This package offers suite of functions to plot the decomposed time series data in ggplot and can be integrated with ggplot functions. We will use the co2 dataset to illustrate these functions.
+
+**Visualise the observed, trend, seasonal, and random components of time series into one figure**
+
+``` r
+require(tidyr)
+require(ggplot2)
+
+data(co2)
+
+df <- dts2(co2, type ="additive")
+
+#plots decomposed time series into one figure
+ggdecompose(df)+
+  xlab("Date")+
+  ylab("Atmospheric Concentration of CO2")
+```
+
+    ## Warning: Removed 6 rows containing missing values (geom_path).
+
+![](README_files/figure-markdown_github/unnamed-chunk-4-1.png)
+
+**Visualise the observed, trend, seasonal, and random components of time series into one figure** separate figures (ggobserve, ggtrend, ggseason, ggrandom, respectively). These functions also plots detrended and deseasonalised time series (ggdetrend and ggseason, respectively). These can be integrated with ggplot functions.
