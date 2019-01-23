@@ -9,22 +9,85 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Introduction
 
-This package contains functions that allow users to plot decomposed time series data using ggplot. 
+This package contains functions that allow users to plot decomposed time series data in ggplot. 
 
 ## Installation
 
-```{r}
-library("devtools")
-install_github("brisneve/ggplottimeseries")
+To install this package, you can use the following codes: 
+
+```{r message=FALSE}
+
+devtools:: install_github("brisneve/ggplottimeseries")
+library(ggplottimeseries)
 
 ```
 
-## Including Plots
+## Functions
 
-You can also embed plots, for example:
+**Decompose time series data into its components (i.e. trends, seasonal, random) and collate them into a data frame.**
 
-```{r pressure, echo=FALSE}
-plot(pressure)
+To demonstrate this, we will use the function *dts1*  to decompose the daily sea surface temperature data into its three components. This dataset has 2142 observations on the following 2 variables: 
+
+1. date - a vector of time of observation (class: data, format: YYYY-MM-DD)
+2. sst - sea surfae temperature data (class: numeric)
+
+The *dts1* function requires the following inputs: 
+
+1. x - dates of the observations 
+2. y - observations 
+3. z - frequency of the obserbation over a period of time (e.g. year) 
+4. type - type of timeseries (additive or multiplicative) 
+
+Try the codes below and explore the output data frame which contains the components of the time series:
+
+```{r message=FALSE}
+data(sst)
+
+x <- sst$date
+y <- sst$sst
+z <- 365.25 #number of days in a year
+
+df <- dts1(x,y,z, type = "additive")
+
+head(df)
+
+
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+Alternatively, if you have a time series-class data you can use the function *dts2*. See how this function works using the co2 dataset that contains a time series of atmospheric concentration of CO2. This function creates a dataframe of the time series components similar to the *dts2*. 
+
+```{r message=FALSE}
+
+data(co2)
+
+df <- dts2(co2, type ="additive")
+
+head(df)
+
+```
+
+We now have a data frame that we could plot using ggplot. This package offers suite of functions to plot the decomposed time series data in ggplot and can be integrated with ggplot functions.
+
+**Visualise the observed, trend, seasonal, and random components of time series into one figure**  
+
+
+```{r message=FALSE}
+
+
+#plots decomposed time series into one figure
+ggdecompose(df)+
+  xlab("Date")+
+  ylab("Atmospheric Concentration of CO2")
+
+```
+
+
+
+
+
+
+
+
+**Visualise the observed, trend, seasonal, and random components of time series into one figure**   separate figures (ggobserve, ggtrend, ggseason, ggrandom, respectively). These functions also plots detrended and deseasonalised time series (ggdetrend and ggseason, respectively). These can be integrated with ggplot functions.
+
