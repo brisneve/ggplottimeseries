@@ -1,4 +1,6 @@
+if(!require(ggplot2)){install.packages("ggplot2"); library(ggplot2)}
+
 ggseason <- function(x) {
   ggplot(x,aes(x=date, y= seasonal))+
     geom_line()
-} 
+}

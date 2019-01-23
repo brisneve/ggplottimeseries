@@ -1,0 +1,11 @@
+---
+title: "ggplottimeseries: Visualisation of decomposed time series using ggplot"
+author: "Brisneve Edullantes"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## ggplot time series
