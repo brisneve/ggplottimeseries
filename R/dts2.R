@@ -24,6 +24,10 @@
 
 dts2 <- function(x, type = "additive"){
 
+  if(!require(lubridate)){install.packages("lubridate"); library(lubridate)}
+  if(!require(dplyr)){install.packages("dplyr"); library(dplyr)}
+
+
   #load ts data
   a <- x
 

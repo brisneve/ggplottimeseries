@@ -32,8 +32,8 @@
 
 dts1 <- function(x,y,z, type = "additive"){
 
-  library(lubridate)
-  library(dplyr)
+  if(!require(lubridate)){install.packages("lubridate"); library(lubridate)}
+  if(!require(dplyr)){install.packages("dplyr"); library(dplyr)}
 
   #load ts data
   a <- ts(y,

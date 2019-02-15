@@ -16,6 +16,5 @@
 #'
 #' J. G. Acker and G. Leptoukh, “Online Analysis Enhances Use of NASA Earth Science Data”, Eos, Trans. AGU, Vol. 88, No. 2 (9 January 2007), pages 14 and 17.
 #'
-#' @export
-
-data("sst")
+#' @source \url{to_be_added}
+"sst"
