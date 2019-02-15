@@ -4,17 +4,13 @@
 \name{sst}
 \alias{sst}
 \title{Sea surface temperature data}
-\format{a sample dataframe with 2142 observations on the following 2 variables.
+\format{a sample dataframe with 2142 observations on the following variables.
 \describe{
   \item{\code{date}}{a date vector of the time of the observation}
   \item{\code{sst}}{a numeric vector}}}
-\usage{
-sst
-}
 \description{
 Daily sea surface temperature data downloaded from Giovanni
 }
 \author{
 Brisneve Edullantes
 }
-\keyword{datasets}
