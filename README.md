@@ -9,7 +9,7 @@ This package contains functions that allow users to plot decomposed time series 
 Installation
 ------------
 
-To install this package, you can use the following codes:
+To install and load this package, you can use the following codes:
 
 ``` r
 devtools:: install_github("brisneve/ggplottimeseries")
@@ -21,7 +21,7 @@ Functions
 
 **Decompose time series data into its components (i.e. trends, seasonal, random) and collate them into a data frame.**
 
-To demonstrate this, we will use the function *dts1* to decompose the daily sea surface temperature data into its three components. This dataset has 2142 observations on the following 2 variables:
+To demonstrate this, we will use the function *dts1* to decompose the daily sea surface temperature data into its three components. This dataset has 2142 observations on the following variables:
 
 1.  date - a vector of time of observation (class: data, format: YYYY-MM-DD)
 2.  sst - sea surfae temperature data (class: numeric)
@@ -73,7 +73,7 @@ head(df)
     ## 5 1959-05-02 16:00:01      318.13    NA  3.00028509     NA
     ## 6 1959-06-02 02:00:01      318.00    NA  2.32921053     NA
 
-We now have a data frame that we could plot using ggplot. This package offers suite of functions to plot the decomposed time series data in ggplot and can be integrated with ggplot functions. We will use the co2 dataset to illustrate these functions.
+We now have a data frame that we can plot using ggplot. This package offers suite of functions to plot the decomposed time series data in ggplot and can be integrated with ggplot functions. We will use the co2 dataset to illustrate these functions.
 
 **Visualise the observed, trend, seasonal, and random components of time series into one figure**
 
@@ -146,6 +146,6 @@ ggdeseason(df)+
 
 ![](README_files/figure-markdown_github/unnamed-chunk-10-1.png)
 
-**If you find this very useful, please cite this package:**
+**Citation:**
 
 *Brisneve Edullantes (2019). ggplottimeseries: Visualisation of Decomposed Time Series with ggplot2. R package version 0.1.0.*

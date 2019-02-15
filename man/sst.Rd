@@ -8,9 +8,13 @@
 \describe{
   \item{\code{date}}{a date vector of the time of the observation}
   \item{\code{sst}}{a numeric vector}}}
+\usage{
+sst
+}
 \description{
 Daily sea surface temperature data downloaded from Giovanni
 }
 \author{
 Brisneve Edullantes
 }
+\keyword{datasets}

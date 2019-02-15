@@ -10,6 +10,5 @@
 #'
 #' @author Brisneve Edullantes
 
-library(readr)
-sst <- read_csv("data/sst.csv")
-usethis::use_data(sst, overwrite = TRUE)
+"sst"
+
