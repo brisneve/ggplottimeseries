@@ -67,11 +67,9 @@ head(df)
 
 ```
 
-We now have a data frame that we could plot using ggplot. This package offers suite of functions to plot the decomposed time series data in ggplot and can be integrated with ggplot functions. We will use the co2 dataset to illustrate these functions. 
+We now have a data frame that we can plot using ggplot. This package offers suite of functions to plot the decomposed time series data in ggplot and can be integrated with ggplot functions. We will use the co2 dataset to illustrate these functions. 
 
 **Visualise the observed, trend, seasonal, and random components of time series into one figure**  
-
-
 
 
 ```{r message=FALSE, warning= FALSE}
@@ -142,7 +140,7 @@ ggdeseason(df)+
 ```
 
 
-**If you find this very useful, please cite this package:** 
+**Citation:** 
 
   *Brisneve Edullantes (2019). ggplottimeseries: Visualisation of Decomposed Time Series with
   ggplot2. R package version 0.1.0.*
