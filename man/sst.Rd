@@ -4,16 +4,20 @@
 \name{sst}
 \alias{sst}
 \title{Sea surface temperature data}
-\format{data frame with 2142 observations on the following 2 variables.
+\format{a sample dataframe with 2142 observations on the following 2 variables.
 \describe{
   \item{\code{date}}{a date vector of the time of the observation}
   \item{\code{sst}}{a numeric vector}}}
+\source{
+\url{to_be_added}
+}
+\usage{
+sst
+}
 \description{
 Daily sea surface temperature data downloaded from Giovanni
-}
-\references{
-J. G. Acker and G. Leptoukh, “Online Analysis Enhances Use of NASA Earth Science Data”, Eos, Trans. AGU, Vol. 88, No. 2 (9 January 2007), pages 14 and 17.
 }
 \author{
 Brisneve Edullantes
 }
+\keyword{datasets}
