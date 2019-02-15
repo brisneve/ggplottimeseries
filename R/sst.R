@@ -8,6 +8,5 @@
 #'   \item{\code{sst}}{a numeric vector}}
 #'
 #' @author Brisneve Edullantes
-#'
-#' @source \url{to_be_added}
+
 "sst"

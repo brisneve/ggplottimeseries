@@ -8,9 +8,6 @@
 \describe{
   \item{\code{date}}{a date vector of the time of the observation}
   \item{\code{sst}}{a numeric vector}}}
-\source{
-\url{to_be_added}
-}
 \usage{
 sst
 }
